@@ -6,22 +6,22 @@
 
 You’ll design and build a small app or service — anything you like — then deploy it to GCP using Terraform. The only non-negotiable requirements are below. Everything else is up to you.
 
-Requirements 📝
+## Requirements 📝
 
-Create Your Own App/Service
+### Create Your Own App/Service
 
 - Must have at least one route or endpoint serving dynamic data (e.g., JSON, HTML, or custom output).
 - You decide the tech stack, language, framework, etc.
 - README must include minimal instructions for local setup (e.g., npm install && npm start, etc.).
 
-Deployment Target: Cloud Run or Cloud Functions (you pick)
+### Deployment Target: Cloud Run or Cloud Functions (you pick)
 
 - If you choose Cloud Run, containerize your app using Docker and deploy it. Push image to Artifact Registry or Docker Hub.
 - If you choose Cloud Functions, package your function for deployment.
 - Code must be version-controlled (e.g., GitHub, GitLab, etc.).
 - Must run behind HTTPS — use a custom domain with HTTPS via Cloud Load Balancing + SSL cert or Cloud Run domain mappings + managed certs.
 
-Terraform: Infrastructure as Code
+### Terraform: Infrastructure as Code
 
 - Use Terraform for all infrastructure, including:
   - Cloud Run / Cloud Functions
@@ -32,7 +32,7 @@ Terraform: Infrastructure as Code
 - Structure your Terraform cleanly — no all-in-one main.tf.
 - Demonstrate best practices: input variables, output modules, DRY patterns.
 
-CI/CD Pipeline
+### CI/CD Pipeline
 
 - Must include an automated pipeline to:
   - Build and test the app
@@ -42,13 +42,13 @@ CI/CD Pipeline
   - Use Secret Manager, encrypted Terraform vars, or another secure method.
   - Bonus: use self-hosted Vault for secrets.
 
-Architecture Diagram
+### Architecture Diagram
 
 - Must clearly show how your infra and app components fit together.
 - Use draw.io, Lucidchart, Mermaid, or even ASCII art.
 - Add this to your README.md.
 
-Project Deliverables
+### Project Deliverables
 
 - Git repo with:
   - App code (backend/API/function code)
@@ -61,7 +61,7 @@ Project Deliverables
   - Architecture diagram
   - Explanation or link to the CI/CD pipeline
 
-Constraints & Hints (No Hand-holding)
+### Constraints & Hints (No Hand-holding)
 
 - Security: Use IAM roles, not hardcoded keys. Rotate secrets properly.
 - Terraform: You can use modules/providers from the registry but must demonstrate correct integration and understanding.
@@ -71,7 +71,7 @@ Constraints & Hints (No Hand-holding)
   - Multiple environments (staging/prod)
   - Logging/monitoring setup with Cloud Logging, Error Reporting, or OpenTelemetry
 
-GCP Equivalents (AWS to GCP)
+### GCP Equivalents (AWS to GCP)
 
 | AWS | GCP  Equivalent |
 | --- | --- |
@@ -84,4 +84,3 @@ GCP Equivalents (AWS to GCP)
 | Secrets Manager | Secret Manager
 | IAM Roles/Policies | GCP IAM
 | CodePipeline | Cloud Build or any CI
-
